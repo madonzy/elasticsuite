@@ -47,7 +47,7 @@ interface FieldInterface
     const ANALYZER_SORTABLE   = 'sortable';
     const ANALYZER_PHONETIC   = 'phonetic';
     const ANALYZER_UNTOUCHED  = 'untouched';
-
+    const ANALYZER_REFERENCE  = 'reference';
     /**
      * Field name.
      *
@@ -95,6 +95,13 @@ interface FieldInterface
      * @return boolean
      */
     public function isUsedInAutocomplete();
+
+    /**
+     * Is the field modelizes a technical reference (SKU, EAN13, etc...).
+     *
+     * @return boolean
+     */
+    public function isReferenceField();
 
     /**
      * Weight of the fields in search.

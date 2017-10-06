@@ -48,6 +48,7 @@ class Mapping implements MappingInterface
             FieldInterface::ANALYZER_STANDARD,
             FieldInterface::ANALYZER_WHITESPACE,
             FieldInterface::ANALYZER_SHINGLE,
+	    FieldInterface::ANALYZER_REFERENCE
         ],
         self::DEFAULT_SPELLING_FIELD     => [
             FieldInterface::ANALYZER_STANDARD,
@@ -60,6 +61,10 @@ class Mapping implements MappingInterface
             FieldInterface::ANALYZER_WHITESPACE,
             FieldInterface::ANALYZER_SHINGLE,
         ],
+        self::DEFAULT_REFERENCE_FIELD => [
+	    FieldInterface::ANALYZER_REFERENCE,
+            FieldInterface::ANALYZER_STANDARD
+        ],
     ];
 
     /**
@@ -71,6 +76,7 @@ class Mapping implements MappingInterface
         'isSearchable'         => self::DEFAULT_SEARCH_FIELD,
         'isUsedInSpellcheck'   => self::DEFAULT_SPELLING_FIELD,
         'isUsedInAutocomplete' => self::DEFAULT_AUTOCOMPLETE_FIELD,
+	'isReferenceField'  => self::DEFAULT_REFERENCE_FIELD
     ];
 
     /**

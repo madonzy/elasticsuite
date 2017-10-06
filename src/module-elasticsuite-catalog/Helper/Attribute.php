@@ -115,6 +115,10 @@ class Attribute extends Mapping
             $options['is_filterable'] = true;
         }
 
+        if ($attribute->getIsReferenceField()) {
+            $options['is_reference_field'] = true;
+        }
+
         return $options;
     }
 
